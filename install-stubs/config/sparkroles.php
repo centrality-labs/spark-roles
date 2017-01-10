@@ -10,8 +10,8 @@ return array(
     |
     */
     'models'  => [
-        'role' => 'App\Role',
-        'permission' => 'App\Permission',
+        'role' => 'App\\Role',
+        'permission' => 'App\\Permission',
     ],
 
     /*
