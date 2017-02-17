@@ -45,7 +45,7 @@ class SparkRoles
     public function can($permissions)
     {
         if ($this->auth->check()) {
-            return $this->getModels()->contains(function ($value, $key) {
+            return $this->getModels()->contains(function ($value, $key) use ($permissions) {
                 return $value->can($permissions);
             });
         } else {
@@ -69,7 +69,7 @@ class SparkRoles
     public function canAtLeast($permissions)
     {
         if ($this->auth->check()) {
-            return $this->getModels()->contains(function ($value, $key) {
+            return $this->getModels()->contains(function ($value, $key) use ($permissions) {
                 return $value->canAtLeast($permissions);
             });
         } else {
