@@ -30,11 +30,7 @@ trait CanHaveRoles
      */
     public function getRoles()
     {
-        if (! is_null($this->roles)) {
-            return $this->roles->pluck('slug')->all();
-        }
-
-        return null;
+        return $this->roles()->pluck('slug')->all();
     }
 
     /**
@@ -45,15 +41,8 @@ trait CanHaveRoles
      */
     public function isRole($slug)
     {
-        $slug = strtolower($slug);
-
-        foreach ($this->roles()->get() as $role) {
-            if ($role->slug == $slug) {
-                return true;
-            }
-        }
-
-        return false;
+        $slugs = $this->roles()->pluck('slug');
+        return $slugs->contains(strtolower($slug));
     }
 
     /**
@@ -62,15 +51,10 @@ trait CanHaveRoles
      * @param  int $roleId
      * @return bool
      */
-    public function assignRole($roleId = null)
+    public function assignRole($roleIdSlugOrModel)
     {
-        $roles = $this->roles;
-
-        if (! $roles->contains($roleId)) {
-            return $this->roles()->attach($roleId);
-        }
-
-        return false;
+        $role = (SparkRoles::roleModel())::get($roleIdSlugOrModel);
+        return $role ? $this->roles()->attach($role->id) : false;
     }
 
     /**
@@ -79,9 +63,10 @@ trait CanHaveRoles
      * @param  int $roleId
      * @return bool
      */
-    public function revokeRole($roleId = '')
+    public function revokeRole($roleIdSlugOrModel)
     {
-        return $this->roles()->detach($roleId);
+        $role = (SparkRoles::roleModel())::get($roleIdSlugOrModel);
+        return $role ? $this->roles()->detach($role->id) : false;
     }
 
     /**

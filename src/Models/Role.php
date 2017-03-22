@@ -25,9 +25,19 @@ class Role extends Model
     /**
      * Static getter
      **/
-    public static function get($slug)
+    public static function get($roleIdSlugOrModel)
     {
-        return self::where('slug', $slug)->first();
+        $role = null;
+        if (is_string($roleIdSlugOrModel)) {
+            $role = self::where('slug', $roleIdSlugOrModel)->first();
+        }
+        if (is_numeric($roleIdSlugOrModel)) {
+            $role = self::find($roleIdSlugOrModel);
+        }
+        if (is_object($roleIdSlugOrModel)) {
+            $role = $roleIdSlugOrModel;
+        }
+        return $role;
     }
 
     /**
