@@ -21,7 +21,7 @@ trait CanHaveLinkedTeams
         $roleCache = collect([]);
         $combined = collect([]);
 
-        $recurse = function ($role) use ($recurse, $col, $roleCache, $combined) {
+        $recurse = function ($role) use (&$recurse, $col, &$roleCache, &$combined) {
             if ($role) {
                 if ($roleCache->has($role)) {
                     $roles = $roleCache->get($role);
@@ -56,7 +56,7 @@ trait CanHaveLinkedTeams
         $canAssume = config('sparkroles.teamlink.canassume');
         $assumed = collect([]);
 
-        $recurse = function ($role) use ($recurse, $canAssume, $assumed) {
+        $recurse = function ($role) use (&$recurse, &$canAssume, &$assumed) {
             if ($assumed->contains($role)) {
                 return;
             }
