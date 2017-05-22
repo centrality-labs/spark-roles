@@ -41,11 +41,16 @@ return array(
     |--------------------------------------------------------------------------
     |
     | Add all users, or all users in a team, with a given role to the Spark
-    | developer array
+    | developer array. Caching of developer array can be disabled by setting
+    | 'cache' to false.
     |
     */
     'developer'  => [
         'enable' => true,
         'slug' => 'developer',
+        'cache' => [
+            'key' => 'spark.developers',
+            'timeout' => 12 * 60 // 12 hours in minutes
+        ]
     ],
 );
