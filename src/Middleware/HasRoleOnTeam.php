@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Middleware;
+namespace ZiNETHQ\SparkRoles\Middleware;
 
 use Closure;
 use ZiNETHQ\SparkRoles\Middleware\AbstractMiddleware;
