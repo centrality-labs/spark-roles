@@ -23,7 +23,9 @@ class AddDevelopers extends AbstractMiddleware
     {
         try {
             if (config('sparkroles.developer.enable')) {
-                $role = Role::where('slug', config('sparkroles.developer.slug'))->first();
+                $role = Role::with('users', 'teams', 'teams.owner', 'teams.users')
+                    ->where('slug', config('sparkroles.developer.slug'))
+                    ->first();
                 if ($role) {
                     $developers = [];
 
@@ -32,11 +34,13 @@ class AddDevelopers extends AbstractMiddleware
                     }
 
                     foreach ($role->teams as $team) {
+                        $developers[] = $team->owner->email;
                         foreach ($team->users as $user) {
                             $developers[] = $user->email;
                         }
                     }
-                    Spark::developers(array_merge(Spark::$developers, $developers));
+
+                    Spark::developers(array_values(array_unique(array_merge(Spark::$developers, $developers))));
                 }
             }
         } catch (Exception $e) {
