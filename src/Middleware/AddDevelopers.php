@@ -5,6 +5,7 @@ namespace ZiNETHQ\SparkRoles\Middleware;
 use Closure;
 use Laravel\Spark\Spark;
 use ZiNETHQ\SparkRoles\Models\Role;
+use ZiNETHQ\SparkRoles\Middleware\AbstractMiddleware;
 use Exception;
 use Log;
 

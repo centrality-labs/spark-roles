@@ -3,6 +3,7 @@
 namespace App\Http\Middleware;
 
 use Closure;
+use ZiNETHQ\SparkRoles\Middleware\AbstractMiddleware;
 
 class HasRoleOnTeam extends AbstractMiddleware
 {
