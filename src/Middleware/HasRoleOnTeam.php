@@ -18,7 +18,8 @@ class HasRoleOnTeam extends AbstractMiddleware
     public function handle($request, Closure $next, $roles)
     {
         $authorizedRoles = array_map('trim', explode('|', $roles));
-        $roleOnTeam = $request->user()->roleOn($request->user()->currentTeam);
+        $user = $request->user();
+        $roleOnTeam = $user->roleOn($user->currentTeam);
 
         if (!in_array($roleOnTeam, $authorizedRoles)) {
             return $this->forbidden($request);
