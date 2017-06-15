@@ -26,7 +26,7 @@ You will find user friendly documentation in the [ZiNETHQ SparkRoles Wiki](https
 1. Install the package through Composer.
 
     ```bash
-    composer require zinethq/spark-roles
+    composer require zinethq/spark-roles:dev-master
     ```
 
 2. Publish the configuration, models, and migrations into your project.
