@@ -1,0 +1,11 @@
+* text=auto
+*.css linguist-vendored
+*.scss linguist-vendored
+*.sh text eol=lf
+*.php text eol=lf
+update text eol=lf
+homestead text eol=lf
+rebuild text eol=lf
+verify text eol=lf
+ide-helper text eol=lf
+clear-caches text eol=lf

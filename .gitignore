@@ -1,4 +1,59 @@
-vendor/
+### Laravel ###
+.env
+
+
+### Composer and NPM ###
 composer.lock
+/vendor/
+/node_modules/
+
+
+### Log files ###
 *.log
+routes.xlsx
+routes.csv
+routes.md
+routes.txt
+
+
+### Homestead ###
+/.vagrant/
+Homestead.json
+Homestead.yaml
+
+
+#### OAuth tokens ###
 auth.json
+
+
+### IDE Helper Generated Files ###
+_ide_helper.php
+_ide_helper_models.php
+.phpstorm.meta.php
+
+
+# Rocketeer PHP task runner and deployment package. https://github.com/rocketeers/rocketeer
+.rocketeer/
+
+
+### OSX System Files ###
+.DS_Store
+
+
+### MicrosoftOffice ###
+*.tmp
+
+# Word temporary
+~$*.doc*
+
+# Excel temporary
+~$*.xls*
+
+# Excel Backup File
+*.xlk
+
+# PowerPoint temporary
+~$*.ppt*
+
+# Visio autosave temporary files
+*.~vsdx
