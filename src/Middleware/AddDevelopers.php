@@ -41,12 +41,13 @@ class AddDevelopers extends AbstractMiddleware
 
     private function getDevelopers()
     {
+        $developers = [];
+        
         $role = Role::with('users', 'teams', 'teams.owner', 'teams.users')
             ->where('slug', config('sparkroles.developer.slug'))
             ->first();
+        
         if ($role) {
-            $developers = [];
-
             foreach ($role->users as $user) {
                 $developers[] = $user->email;
             }
@@ -57,8 +58,8 @@ class AddDevelopers extends AbstractMiddleware
                     $developers[] = $user->email;
                 }
             }
-
-            return array_values(array_unique(array_merge(Spark::$developers, $developers)));
         }
+        
+        return array_values(array_unique(array_merge(Spark::$developers, $developers)));
     }
 }
