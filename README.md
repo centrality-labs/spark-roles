@@ -20,34 +20,36 @@ Permissions are then inherited to the team/user through the team/user's assigned
 This package is a replacement for [Caffeinated Shinobi](https://github.com/caffeinated/shinobi/) when building a project based on `Laravel/Spark`.
 
 ## Documentation
+
 You will find user friendly documentation in the [ZiNETHQ SparkRoles Wiki](https://github.com/zinethq/spark-roles/wiki) **BEING UPDATED**
 
 ## Quick Installation
+
 1. Install the package through Composer.
 
     ```bash
     composer require zinethq/spark-roles:dev-master
     ```
 
-2. Publish the configuration, models, and migrations into your project.
-
-    ```bash
-    php artisan vendor:publish --provider="ZiNETHQ\SparkRoles\SparkRolesServiceProvider"
-    ```
-
-3. Migrate your database.
-
-    ```bash
-    php artisan migrate
-    ```
-
-4. Add the service provider to your project's `config/app.php` file.
+1. Add the service provider to your project's `config/app.php` file.
 
     ```php
     ZiNETHQ\SparkRoles\SparkRolesServiceProvider::class,
     ```
 
-5. Add the `CanUseRoles` trait to your `Team` and/or `User` models, for example:
+1. Publish the configuration, models, and migrations into your project.
+
+    ```bash
+    php artisan vendor:publish --provider="ZiNETHQ\SparkRoles\SparkRolesServiceProvider"
+    ```
+
+1. Migrate your database.
+
+    ```bash
+    php artisan migrate
+    ```
+
+1. Add the `CanUseRoles` trait to your `Team` and/or `User` models, for example:
 
     - `app\Team.php`
     ```php
@@ -81,7 +83,7 @@ You will find user friendly documentation in the [ZiNETHQ SparkRoles Wiki](https
     }
     ```
 
-6. **Optional:** If you'd like to dynamically assign the Spark developer array based on team/user roles then open `app\Http\kernel.php` and add the following to the `web` middleware group:
+1. **Optional:** If you'd like to dynamically assign the Spark developer array based on team/user roles then open `app\Http\kernel.php` and add the following to the `web` middleware group:
 
     ```php
     \ZiNETHQ\SparkRoles\Middleware\AddDevelopers::class,
@@ -89,12 +91,14 @@ You will find user friendly documentation in the [ZiNETHQ SparkRoles Wiki](https
 
     This middleware can be controlled (enabled/disabled and choose the role slug that identifies developers) in the package's configuration file.
 
-7. Start using roles for your Spark teams and users!
+1. Start using roles for your Spark teams and users!
 
 ## Contributing
+
 Fork, edit, pull request. You know the drill.
 
 ### Hit list
+
 If you'd like to contribute consider helping with one of the following:
 
 - [X] ~~Add Travis CI integration~~
