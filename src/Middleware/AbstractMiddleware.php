@@ -12,7 +12,7 @@ class AbstractMiddleware
         if ($request->ajax()) {
             return response($message, 403);
         }
-        return abort(403);
+        return abort(403, $message);
     }
 
     protected function badrequest($request, $message = 'Bad request')
@@ -20,6 +20,6 @@ class AbstractMiddleware
         if ($request->ajax()) {
             return response($message, 400);
         }
-        return abort(400);
+        return abort(400, $message);
     }
 }
