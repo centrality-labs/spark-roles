@@ -1,6 +1,6 @@
 <?php
 
-namespace ZiNETHQ\SparkRoles\Traits;
+namespace CentralityLabs\SparkRoles\Traits;
 
 use Laravel\Spark\Spark;
 

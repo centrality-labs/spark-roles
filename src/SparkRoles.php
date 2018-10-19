@@ -1,12 +1,12 @@
 <?php
-namespace ZiNETHQ\SparkRoles;
+namespace CentralityLabs\SparkRoles;
 
 use Illuminate\Contracts\Auth\Guard;
 use Illuminate\Support\Collection;
 use Laravel\Spark\Spark;
 
-use ZiNETHQ\SparkRoles\Models\Role;
-use ZiNETHQ\SparkRoles\Traits\CanHaveRoles;
+use CentralityLabs\SparkRoles\Models\Role;
+use CentralityLabs\SparkRoles\Traits\CanHaveRoles;
 
 class SparkRoles
 {

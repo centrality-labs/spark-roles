@@ -1,18 +1,14 @@
 {
-    "name": "zinethq/spark-roles",
+    "name": "centrality-labs/spark-roles",
     "description": "Roles and permissions for teams and users in Laravel Spark, based on caffeinated/shinobi",
-    "keywords": ["caffeinated", "shinobi", "roles", "permissions", "auth", "team", "user", "laravel", "spark", "zinethq"],
+    "keywords": ["caffeinated", "shinobi", "roles", "permissions", "auth", "team", "user", "laravel", "spark", "centrality-labs"],
     "license": "MIT",
     "authors": [{
             "name": "Jon Nicholson",
-            "email": "jon.nicholson@zinethq.com",
-            "homepage": "http://www.drjonnicholson.com",
             "role": "Developer"
         },
         {
             "name": "Ian Tasker",
-            "email": "ian.tasker@zinethq.com",
-            "homepage": "http://www.zinethq.com",
             "role": "Developer"
         }
     ],
@@ -25,7 +21,7 @@
     },
     "autoload": {
         "psr-4": {
-            "ZiNETHQ\\SparkRoles\\": "src/"
+            "CentralityLabs\\SparkRoles\\": "src/"
         }
     },
     "extra": {

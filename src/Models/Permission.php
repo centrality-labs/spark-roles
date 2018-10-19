@@ -1,8 +1,8 @@
 <?php
-namespace ZiNETHQ\SparkRoles\Models;
+namespace CentralityLabs\SparkRoles\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use ZiNETHQ\SparkRoles\SparkRoles;
+use CentralityLabs\SparkRoles\SparkRoles;
 
 class Permission extends Model
 {

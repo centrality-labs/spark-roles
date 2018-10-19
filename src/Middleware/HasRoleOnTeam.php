@@ -1,9 +1,9 @@
 <?php
 
-namespace ZiNETHQ\SparkRoles\Middleware;
+namespace CentralityLabs\SparkRoles\Middleware;
 
 use Closure;
-use ZiNETHQ\SparkRoles\Middleware\AbstractMiddleware;
+use CentralityLabs\SparkRoles\Middleware\AbstractMiddleware;
 
 class HasRoleOnTeam extends AbstractMiddleware
 {

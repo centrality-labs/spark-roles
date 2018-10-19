@@ -2,7 +2,7 @@
 
 namespace App;
 
-use ZiNETHQ\SparkRoles\Models\Permission as SparkPermission;
+use CentralityLabs\SparkRoles\Models\Permission as SparkPermission;
 
 class Permission extends SparkPermission
 {

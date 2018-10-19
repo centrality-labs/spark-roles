@@ -1,11 +1,11 @@
 <?php
-namespace ZiNETHQ\SparkRoles;
+namespace CentralityLabs\SparkRoles;
 
 use Blade;
 use Carbon\Carbon;
 use Illuminate\Support\ServiceProvider;
 
-use ZiNETHQ\SparkRoles\SparkRoles;
+use CentralityLabs\SparkRoles\SparkRoles;
 
 class SparkRolesServiceProvider extends ServiceProvider
 {

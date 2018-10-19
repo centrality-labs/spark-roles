@@ -1,6 +1,6 @@
 <?php
 
-namespace ZiNETHQ\SparkRoles\Tests;
+namespace CentralityLabs\SparkRoles\Tests;
 
 use PHPUnit\Framework\TestCase;
 

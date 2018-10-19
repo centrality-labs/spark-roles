@@ -1,8 +1,8 @@
 <?php
-namespace ZiNETHQ\SparkRoles\Facades;
+namespace CentralityLabs\SparkRoles\Facades;
 
 use Illuminate\Support\Facades\Facade;
-use ZiNETHQ\SparkRoles\SparkRoles as Roles;
+use CentralityLabs\SparkRoles\SparkRoles as Roles;
 
 class SparkRoles extends Facade
 {

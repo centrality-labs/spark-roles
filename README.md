@@ -1,9 +1,9 @@
-# ZiNETHQ Spark Roles
+# CentralityLabs Spark Roles
 
 [![Laravel 5.3](https://img.shields.io/badge/Laravel-5.3-orange.svg?style=flat-square)](http://laravel.com)
 [![Spark 2.0](https://img.shields.io/badge/Spark-2.0-orange.svg?style=flat-square)](https://spark.laravel.com)
-[![Source](http://img.shields.io/badge/source-zinethq/spark--roles-blue.svg?style=flat-square)](https://github.com/zinethq/spark-roles)
-[![Build Status](https://travis-ci.org/ZiNETHQ/spark-roles.svg?branch=master)](https://travis-ci.org/ZiNETHQ/spark-roles)
+[![Source](http://img.shields.io/badge/source-centrality-labs/spark--roles-blue.svg?style=flat-square)](https://github.com/centrality-labs/spark-roles)
+[![Build Status](https://travis-ci.org/CentralityLabs/spark-roles.svg?branch=master)](https://travis-ci.org/CentralityLabs/spark-roles)
 [![License](http://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](https://tldrlegal.com/license/mit-license)
 
 SparkRoles, based on [Caffeinated Shinobi](https://github.com/caffeinated/shinobi/), brings a simple and light-weight role-based permissions system to Laravel Spark's Team and User models through the following ACL structure:
@@ -21,26 +21,26 @@ This package is a replacement for [Caffeinated Shinobi](https://github.com/caffe
 
 ## Documentation
 
-You will find user friendly documentation in the [ZiNETHQ SparkRoles Wiki](https://github.com/zinethq/spark-roles/wiki) **BEING UPDATED**
+You will find user friendly documentation in the [CentralityLabs SparkRoles Wiki](https://github.com/centrality-labs/spark-roles/wiki) **BEING UPDATED**
 
 ## Quick Installation
 
 1. Install the package through Composer.
 
     ```bash
-    composer require zinethq/spark-roles:dev-master
+    composer require centrality-labs/spark-roles:dev-master
     ```
 
 1. Add the service provider to your project's `config/app.php` file.
 
     ```php
-    ZiNETHQ\SparkRoles\SparkRolesServiceProvider::class,
+    CentralityLabs\SparkRoles\SparkRolesServiceProvider::class,
     ```
 
 1. Publish the configuration, models, and migrations into your project.
 
     ```bash
-    php artisan vendor:publish --provider="ZiNETHQ\SparkRoles\SparkRolesServiceProvider"
+    php artisan vendor:publish --provider="CentralityLabs\SparkRoles\SparkRolesServiceProvider"
     ```
 
 1. Migrate your database.
@@ -58,7 +58,7 @@ You will find user friendly documentation in the [ZiNETHQ SparkRoles Wiki](https
     namespace App;
 
     use Laravel\Spark\Team as SparkTeam;
-    use ZiNETHQ\SparkRoles\Traits\CanHaveRoles;
+    use CentralityLabs\SparkRoles\Traits\CanHaveRoles;
 
     class Team extends SparkTeam
     {
@@ -74,7 +74,7 @@ You will find user friendly documentation in the [ZiNETHQ SparkRoles Wiki](https
     namespace App;
 
     use Laravel\Spark\User as SparkUser;
-    use ZiNETHQ\SparkRoles\Traits\CanHaveRoles;
+    use CentralityLabs\SparkRoles\Traits\CanHaveRoles;
 
     class User extends SparkUser
     {
@@ -86,7 +86,7 @@ You will find user friendly documentation in the [ZiNETHQ SparkRoles Wiki](https
 1. **Optional:** If you'd like to dynamically assign the Spark developer array based on team/user roles then open `app\Http\kernel.php` and add the following to the `web` middleware group:
 
     ```php
-    \ZiNETHQ\SparkRoles\Middleware\AddDevelopers::class,
+    \CentralityLabs\SparkRoles\Middleware\AddDevelopers::class,
     ```
 
     This middleware can be controlled (enabled/disabled and choose the role slug that identifies developers) in the package's configuration file.

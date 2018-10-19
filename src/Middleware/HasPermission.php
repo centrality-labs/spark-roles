@@ -1,11 +1,11 @@
 <?php
 
-namespace ZiNETHQ\SparkRoles\Middleware;
+namespace CentralityLabs\SparkRoles\Middleware;
 
 use Closure;
 use Illuminate\Contracts\Auth\Guard;
-use ZiNETHQ\SparkRoles\Models\Role;
-use ZiNETHQ\SparkRoles\Middleware\AbstractMiddleware;
+use CentralityLabs\SparkRoles\Models\Role;
+use CentralityLabs\SparkRoles\Middleware\AbstractMiddleware;
 
 class HasPermission extends AbstractMiddleware
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace ZiNETHQ\SparkRoles\Middleware;
+namespace CentralityLabs\SparkRoles\Middleware;
 
 use Closure;
 use Illuminate\Support\Facades\Auth;

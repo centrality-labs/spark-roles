@@ -1,10 +1,10 @@
 <?php
-namespace ZiNETHQ\SparkRoles\Models;
+namespace CentralityLabs\SparkRoles\Models;
 
 use Config;
 use Illuminate\Database\Eloquent\Model;
 use Laravel\Spark\Spark;
-use ZiNETHQ\SparkRoles\SparkRoles;
+use CentralityLabs\SparkRoles\SparkRoles;
 
 class Role extends Model
 {

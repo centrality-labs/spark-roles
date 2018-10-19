@@ -1,8 +1,8 @@
 <?php
 
-namespace ZiNETHQ\SparkRoles\Traits;
+namespace CentralityLabs\SparkRoles\Traits;
 
-use ZiNETHQ\SparkRoles\SparkRoles;
+use CentralityLabs\SparkRoles\SparkRoles;
 
 trait CanHaveRoles
 {
